@@ -1,0 +1,14 @@
+{
+  "repo": "itrustcapital",
+  "feeds": [
+    {
+      "source": "https://www.itrustcapital.com/support/service-status",
+      "feed_url": "https://www.itrustcapital.com/support/service-status",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-01T15:49:00Z"
+}

@@ -1,0 +1,31 @@
+generated: '2026-08-01'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.itrustcapital.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  6 00:59:44 2026 GMT
+  hsts: true
+  hsts_max_age: 10886400
+- host: app.itrustcapital.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  6 03:53:16 2026 GMT
+  hsts: null
+  note: 'Application host (web app login/signup). Fronted by Cloudflare bot management
+    — anonymous HEAD/GET returns HTTP 403 with a JS interstitial, so HSTS could not
+    be observed. TLS handshake and certificate were observed directly.'
+domains:
+- domain: itrustcapital.com
+  dnssec: true
+  caa:
+  - 0 issue "comodoca.com"
+  - 0 issue "digicert.com; cansignhttpexchanges=yes"
+  - 0 issue "godaddy.com"
+  - 0 issue "letsencrypt.org"
+  - 0 issue "pki.goog; cansignhttpexchanges=yes"
+  - 0 issue "ssl.com"
+  spf: true
+  dmarc: true
+  dmarc_policy: reject

@@ -1,0 +1,43 @@
+generated: '2026-08-01'
+method: searched
+source: https://www.itrustcapital.com/support/service-status
+scope: platform
+note: 'iTrustCapital publishes no public developer API, so there is no API versioning
+  scheme, no deprecation policy and no Sunset/Deprecation header contract to record.
+  What the company does operate is a customer-facing platform service-status page,
+  captured below.'
+status_page:
+  url: https://www.itrustcapital.com/support/service-status
+  title: iTrustCapital Service Status
+  subtitle: System Updates and Announcements
+  hosted: first-party
+  vendor: null
+  note: First-party page on the marketing site (not Statuspage.io/Instatus); content
+    is loaded client-side. No public JSON/RSS status feed was found.
+  http_status: 200
+  fetched: '2026-08-01'
+versioning:
+  scheme: null
+  current: null
+  docs: null
+  note: not applicable — no public API
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: not applicable — no public API
+sla:
+  url: null
+  uptime_target: null
+  note: No published SLA or uptime target found on the public site.
+support:
+  help_center: https://help.itrustcapital.com/hc/en-us
+  library: https://www.itrustcapital.com/support/library
+  phone: (562) 600-8399
+  phone_hours: Monday - Friday, 7AM - 5PM PT
+deprecated_operations: []
+x-evidence:
+  fetched: '2026-08-01'
+  urls:
+  - https://www.itrustcapital.com/support/service-status
+  - https://www.itrustcapital.com/sitemap-0.xml
+  http_status: 200

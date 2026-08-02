@@ -1,0 +1,70 @@
+# iTrustCapital
+
+> iTrustCapital (legal entity ITC2.0, Inc.) is a US fintech software platform for alternative assets, giving self-directed investors 24/7 access to dozens of cryptocurrencies and physical precious metals through tax-advantaged Crypto IRAs, Premium Custody Accounts, and Treasury Accounts for entities. It charges a 1% cryptocurrency transaction fee and no monthly, annual, startup, exit, storage or transfer fees.
+
+> IMPORTANT FOR AGENTS: iTrustCapital publishes **no public developer API**. Its own help center states: "At this time iTrustCapital does not offer any API integration to any third-party applications, including self-trading bots and coin trackers." There is no OpenAPI, no GraphQL endpoint, no MCP server, no A2A agent card, no SDK, no CLI and no webhook surface. Do not attempt to construct or infer one. Account access is through the web application and the iOS/Android mobile apps only.
+
+## Products
+
+- [Crypto IRA](https://www.itrustcapital.com/ira): Self-directed tax-advantaged individual retirement account for cryptocurrencies and physical precious metals.
+- [IRA Tax Benefits](https://www.itrustcapital.com/ira/tax-benefits): How the tax-advantaged treatment works.
+- [Premium Custody Account](https://www.itrustcapital.com/premium-custody-account): Non-retirement everyday investing account.
+- [Treasury Account](https://www.itrustcapital.com/treasury): For businesses, trusts, non-profits and other entities.
+- [Precious Metals](https://www.itrustcapital.com/precious-metals): Physical gold, silver and platinum.
+- [Staking](https://www.itrustcapital.com/staking): Staking supported assets inside the account.
+- [401k Rollover Guide](https://www.itrustcapital.com/401k-rollover-guide): Rolling an existing retirement account into an iTrustCapital IRA.
+
+## Markets
+
+- [Markets](https://www.itrustcapital.com/markets): All supported assets.
+- [Crypto Markets](https://www.itrustcapital.com/markets/crypto): Supported cryptocurrencies (Bitcoin, Ethereum, XRP, Solana and dozens more).
+- [Precious Metals Markets](https://www.itrustcapital.com/markets/precious-metals): Gold, silver, platinum.
+
+## Getting started
+
+- [How to Get Started](https://www.itrustcapital.com/how-to-get-started): Onboarding walkthrough.
+- [Open an Account / Sign Up](https://app.itrustcapital.com/signUp): Account creation.
+- [Log In](https://app.itrustcapital.com/login): Existing account sign-in.
+- [Pricing](https://www.itrustcapital.com/pricing): Fee schedule — 1% crypto transaction fee, $0 monthly/annual/startup/exit/storage/transfer fees.
+
+## Support
+
+- [Help Center](https://help.itrustcapital.com/hc/en-us): Zendesk-hosted support knowledge base.
+- [Support Library](https://www.itrustcapital.com/support/library): On-site support articles and videos.
+- [Service Status](https://www.itrustcapital.com/support/service-status): System updates and announcements.
+- [FAQ](https://www.itrustcapital.com/faq): Frequently asked questions by topic.
+- [Security FAQ](https://www.itrustcapital.com/faq/security): Scam identification and safe-access guidance.
+- [Contact](https://www.itrustcapital.com/contact): Contact form; phone (562) 600-8399, Mon–Fri 7AM–5PM PT.
+- [Accessibility](https://www.itrustcapital.com/accessibility): Accessibility statement.
+
+## Company
+
+- [About Us](https://www.itrustcapital.com/about-us): Company overview and story.
+- [Why iTrustCapital](https://www.itrustcapital.com/why-itrustcapital): Differentiators.
+- [News & Updates](https://www.itrustcapital.com/news): Company news.
+- [Learn Center](https://www.itrustcapital.com/learn): Educational articles and glossary.
+- [Careers](https://www.itrustcapital.com/careers): Open roles.
+- [GitHub Organization](https://github.com/itrustcapital): Exists but publishes zero public repositories.
+
+## Legal
+
+- [Terms of Service](https://www.itrustcapital.com/terms)
+- [Privacy Policy](https://www.itrustcapital.com/privacy)
+- [Cookie Policy](https://www.itrustcapital.com/privacy/cookies)
+- [Do Not Sell or Share My Personal Information](https://www.itrustcapital.com/privacy/do-not-sell-or-share)
+- [Disclosures](https://www.itrustcapital.com/disclosures): Digital asset risk disclosures.
+- [Documents](https://www.itrustcapital.com/documents): IRA Agreement and Individual PCA Agreement.
+
+## Important disclaimer
+
+iTrustCapital (ITC2.0, Inc.) is a fintech software platform for alternative assets. It is not an exchange, funding portal, custodian, trust company, licensed broker, dealer, broker-dealer, investment advisor, investment manager, or adviser. All transactions conducted using the platform are self-directed. IRA custodial services are provided by third parties including iTrust Custodial Services and Fortis Bank; non-IRA custodial services are provided by third-party U.S. banks and institutional storage providers. Digital assets are speculative and are not FDIC or SIPC insured.
+
+<!--
+generated: 2026-08-01
+method: generated
+source: apis.yml + www.itrustcapital.com/sitemap-0.xml + repo artifacts
+note: No /llms.txt is published by iTrustCapital. https://www.itrustcapital.com/llms.txt
+      returns HTTP 200 with the Next.js SPA HTML shell (Content-Type text/html), which
+      is a catch-all false positive, not a document. This file was GENERATED by the
+      API Evangelist enrichment pipeline from the provider's own public pages.
+-->

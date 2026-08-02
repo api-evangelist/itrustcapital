@@ -1,0 +1,129 @@
+generated: '2026-08-01'
+method: probed
+source: live HTTP probes of every iTrustCapital host
+summary: 'No /.well-known/ discovery document is published on any iTrustCapital host.
+  The marketing site (www.itrustcapital.com, Next.js) answers HTTP 200 with the SPA
+  HTML shell for EVERY unknown path, including every /.well-known/* path, /openapi.json,
+  /swagger.json and /llms.txt. Those 200s are catch-all false positives, NOT documents:
+  each returns Content-Type text/html with a <!DOCTYPE html> body. They are recorded
+  below as status 200 with present:false and the observed content type so a future
+  re-run does not mistake them for hits. The application host (app.itrustcapital.com)
+  is behind Cloudflare bot management and returns HTTP 403 to anonymous probes.'
+hosts:
+- host: https://www.itrustcapital.com
+  catch_all_200: true
+  catch_all_content_type: text/html
+- host: https://app.itrustcapital.com
+  catch_all_200: false
+  note: Cloudflare interstitial, HTTP 403 to all anonymous requests
+- host: https://help.itrustcapital.com
+  catch_all_200: false
+  note: Zendesk-hosted help center, HTTP 403 to anonymous non-browser requests
+documents:
+- path: /.well-known/security.txt
+  host: www.itrustcapital.com
+  status: 200
+  present: false
+  content_type: text/html
+  reason: SPA catch-all HTML, not RFC 9116 text
+- path: /.well-known/openid-configuration
+  host: www.itrustcapital.com
+  status: 200
+  present: false
+  content_type: text/html
+  reason: SPA catch-all HTML, not OIDC discovery JSON
+- path: /.well-known/oauth-authorization-server
+  host: www.itrustcapital.com
+  status: 200
+  present: false
+  content_type: text/html
+  reason: SPA catch-all HTML, not RFC 8414 JSON
+- path: /.well-known/api-catalog
+  host: www.itrustcapital.com
+  status: 200
+  present: false
+  content_type: text/html
+  reason: SPA catch-all HTML, not RFC 9727 api-catalog
+- path: /.well-known/ai-plugin.json
+  host: www.itrustcapital.com
+  status: 200
+  present: false
+  content_type: text/html
+  reason: SPA catch-all HTML
+- path: /.well-known/agent-card.json
+  host: www.itrustcapital.com
+  status: 200
+  present: false
+  content_type: text/html
+  reason: SPA catch-all HTML, no AgentCard shape
+- path: /.well-known/agent.json
+  host: www.itrustcapital.com
+  status: 200
+  present: false
+  content_type: text/html
+  reason: SPA catch-all HTML, no AgentCard shape
+- path: /.well-known/security.txt
+  host: app.itrustcapital.com
+  status: 403
+  present: false
+- path: /.well-known/agent-card.json
+  host: app.itrustcapital.com
+  status: 403
+  present: false
+- path: /.well-known/agent.json
+  host: app.itrustcapital.com
+  status: 403
+  present: false
+x-contract-discovery:
+  note: 'STEP 0b contract discovery (pipeline-enrich.md) run in full before recording
+    "no machine-readable contract".'
+  openapi:
+    probed:
+    - https://www.itrustcapital.com/openapi.json
+    - https://www.itrustcapital.com/swagger.json
+    - https://itrustcapital.com/openapi.json
+    - https://itrustcapital.com/swagger.json
+    - https://app.itrustcapital.com/openapi.json
+    - https://app.itrustcapital.com/swagger.json
+    result: none — www/apex return the SPA HTML shell (200 text/html); app host returns
+      403
+  api_hosts_resolved:
+    result: 'no API host exists — DNS NXDOMAIN for api., api-v2., gateway., my., dashboard.,
+      developer., developers., docs., partners., status., trust. and security..itrustcapital.com'
+    resolving:
+    - www.itrustcapital.com
+    - app.itrustcapital.com
+    - help.itrustcapital.com
+  graphql:
+    result: no /graphql surface advertised or discovered
+  mcp:
+    result: no hosted or remote MCP server found in docs, registries or search
+  a2a:
+    result: 'no agent card — both /.well-known/agent-card.json and the legacy /.well-known/agent.json
+      were probed on every host; only SPA HTML or 403 returned. Per pipeline policy
+      NO a2a/ artifact was written.'
+  provider_statement:
+    url: https://help.itrustcapital.com/hc/en-us/articles/4411749720083-Does-iTrustCapital-offer-API-integrations-to-third-party-platforms
+    title: Does iTrustCapital offer API integrations to third party platforms?
+    quote: At this time iTrustCapital does not offer any API integration to any third-party
+      applications, including self-trading bots and coin trackers.
+    article_created: '2021-12-01'
+    article_updated: '2022-08-04'
+    retrieved_via: https://help.itrustcapital.com/api/v2/help_center/en-us/articles/4411749720083.json
+  third_party_surfaces:
+    note: 'The only machine-readable JSON surface on an iTrustCapital-branded host is
+      the VENDOR-operated Zendesk Help Center API at help.itrustcapital.com/api/v2/help_center/*,
+      which serves iTrustCapital support content. It is Zendesk''s API, not a first-party
+      iTrustCapital API, and is deliberately NOT catalogued as an iTrustCapital API.'
+  github_org:
+    url: https://github.com/itrustcapital
+    created: '2020-02-01'
+    public_repos: 0
+    note: Organization is real and first-party (its blog field is itrustcapital.com)
+      but publishes zero public repositories.
+  registries:
+    npm: no package matching "itrustcapital" (registry search total 0)
+    pypi: 404
+x-evidence:
+  fetched: '2026-08-01'
+  method: curl HTTP probes + dig DNS + GitHub/npm/PyPI registry APIs

@@ -1,17 +1,40 @@
 aid: itrustcapital
 name: iTrustCapital
-description: 'iTrustCapital is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'iTrustCapital (legal entity ITC2.0, Inc.) is a US fintech software platform
+  for alternative assets, offering 24/7 self-directed access to dozens of cryptocurrencies
+  and physical precious metals through three account types: tax-advantaged self-directed
+  Crypto IRAs for retirement savings, Premium Custody Accounts (PCA) for everyday non-retirement
+  investing, and Treasury Accounts for businesses, trusts, non-profits and other entities.
+  The platform charges a 1% cryptocurrency transaction fee with no monthly, annual,
+  startup, exit, storage or transfer fees, and runs a closed-loop system backed by
+  third-party US banks, custodians (iTrust Custodial Services, Fortis Bank) and institutional
+  storage providers. iTrustCapital is not an exchange, custodian, trust company, broker-dealer
+  or investment adviser; all transactions on the platform are self-directed. As of
+  this profiling pass the company publishes NO public developer API — its own help
+  center states that it "does not offer any API integration to any third-party applications,
+  including self-trading bots and coin trackers." Access is via the web app and the
+  iOS/Android mobile apps only.'
 url: https://raw.githubusercontent.com/api-evangelist/itrustcapital/refs/heads/main/apis.yml
+image: https://www.itrustcapital.com/itrustcapital-open-graph-image.jpg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment-pass-no-public-api
 specificationVersion: '0.20'
 created: '2026-08-01'
 modified: '2026-08-01'
 tags:
 - Company
+- Financial Services
+- Cryptocurrency
+- Digital Assets
+- Retirement
+- Individual Retirement Accounts
+- Precious Metals
+- Custody
+- Fintech
+- Wealth Management
+- Staking
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +42,56 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/itrustcapital-domain-security.yml
 - type: Website
+  url: https://www.itrustcapital.com/
+- type: SecondaryMarket
   url: https://forgeglobal.com/itrustcapital_stock/
+- type: About
+  url: https://www.itrustcapital.com/about-us
+- type: Pricing
+  url: https://www.itrustcapital.com/pricing
+- type: SignUp
+  url: https://app.itrustcapital.com/signUp
+- type: Login
+  url: https://app.itrustcapital.com/login
+- type: TermsOfService
+  url: https://www.itrustcapital.com/terms
+- type: PrivacyPolicy
+  url: https://www.itrustcapital.com/privacy
+- type: Support
+  url: https://help.itrustcapital.com/hc/en-us
+- type: HelpCenter
+  url: https://www.itrustcapital.com/support/library
+- type: FAQ
+  url: https://www.itrustcapital.com/faq
+- type: Contact
+  url: https://www.itrustcapital.com/contact
+- type: StatusPage
+  url: https://www.itrustcapital.com/support/service-status
+- type: Blog
+  url: https://www.itrustcapital.com/learn
+- type: News
+  url: https://www.itrustcapital.com/news
+- type: GitHubOrganization
+  url: https://github.com/itrustcapital
+- type: Careers
+  url: https://www.itrustcapital.com/careers
+- type: Disclosures
+  url: https://www.itrustcapital.com/disclosures
+- type: LegalDocuments
+  url: https://www.itrustcapital.com/documents
+- type: Accessibility
+  url: https://www.itrustcapital.com/accessibility
+- type: Lifecycle
+  url: lifecycle/itrustcapital-lifecycle.yml
+- type: LLMsTxt
+  url: llms/itrustcapital-llms.txt
+x-enrichment:
+  date: '2026-08-01'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+  api_surface: none
+  api_surface_evidence: well-known/itrustcapital-well-known.yml
