@@ -15,6 +15,9 @@ description: 'iTrustCapital (legal entity ITC2.0, Inc.) is a US fintech software
   including self-trading bots and coin trackers." Access is via the web app and the
   iOS/Android mobile apps only.'
 url: https://raw.githubusercontent.com/api-evangelist/itrustcapital/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "As of this profiling pass the company publishes NO public developer API — its own help center states that it 'does not offer any API integration to any third-party applications, including self-trading"
 deliveryModel:
   model: saas
   open_source: false
