@@ -64,43 +64,87 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-iTrustCapital (legal entity **ITC2.0, Inc.**) is a US fintech software platform for alternative assets,
-offering 24/7 self-directed access to dozens of cryptocurrencies and physical precious metals through
-tax-advantaged Crypto IRAs, Premium Custody Accounts (PCA), and Treasury Accounts for businesses, trusts
-and non-profits. It charges a 1% cryptocurrency transaction fee with no monthly, annual, startup, exit,
-storage or transfer fees.
+iTrustCapital (legal entity ITC2.0, Inc.) is a US fintech software platform for alternative assets, offering 24/7 self-directed access to dozens of cryptocurrencies and physical precious metals through three account types: tax-advantaged self-directed Crypto IRAs for retirement savings, Premium Custody Accounts (PCA) for everyday non-retirement investing, and Treasury Accounts for businesses, trusts, non-profits and other entities. The platform charges a 1% cryptocurrency transaction fee with no monthly, annual, startup, exit, storage or transfer fees, and runs a closed-loop system backed by third-party US banks, custodians (iTrust Custodial Services, Fortis Bank) and institutional storage providers. iTrustCapital is not an exchange, custodian, trust company, broker-dealer or investment adviser; all transactions on the platform are self-directed. As of this profiling pass the company publishes NO public developer API — its own help center states that it "does not offer any API integration to any third-party applications, including self-trading bots and coin trackers." Access is via the web app and the iOS/Android mobile apps only.
 
-- Website: https://www.itrustcapital.com/
-- Secondary market listing: https://forgeglobal.com/itrustcapital_stock/
+**Areas:** Company · Financial Services · Cryptocurrency · Digital Assets · Retirement · Individual Retirement Accounts · Precious Metals · Custody · Fintech · Wealth Management · Staking
 
-## API surface: none
+## iTrustCapital on APIs.io
 
-**iTrustCapital publishes no public developer API.** Its own help center states:
+Everything profiled for iTrustCapital is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/itrustcapital/](https://apis.io/providers/itrustcapital/)** — or go straight to one of the APIs or properties below.
 
-> "At this time iTrustCapital does not offer any API integration to any third-party applications,
-> including self-trading bots and coin trackers."
-> — [Does iTrustCapital offer API integrations to third party platforms?](https://help.itrustcapital.com/hc/en-us/articles/4411749720083-Does-iTrustCapital-offer-API-integrations-to-third-party-platforms)
+### Published properties
 
-Full STEP 0b contract discovery was run before recording that (OpenAPI on every host root, DNS
-enumeration of API subdomains, GraphQL, MCP `tools/list`, A2A agent card on both the canonical and
-legacy well-known paths, npm/PyPI, and the GitHub org). Every probe and its HTTP status is recorded in
-[`well-known/itrustcapital-well-known.yml`](well-known/itrustcapital-well-known.yml).
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Two traps worth noting for any re-run:
+#### Security (1)
 
-1. The marketing site (Next.js) answers **HTTP 200 with the SPA HTML shell for every unknown path** —
-   including `/openapi.json`, `/llms.txt` and every `/.well-known/*` path. Those 200s are catch-all
-   false positives, not documents. Check `Content-Type` before trusting them.
-2. `app.itrustcapital.com` is behind Cloudflare bot management and returns **403** to anonymous probes.
+Authentication, trust centre, and vulnerability disclosure.
 
-## Artifacts
+- [Itrustcapital Domain Security](https://apis.io/security/itrustcapital/itrustcapital-domain-security/)
 
-| Artifact | Method | Notes |
-|---|---|---|
-| [`well-known/itrustcapital-well-known.yml`](well-known/itrustcapital-well-known.yml) | probed | Full contract-discovery record; no well-known documents published |
-| [`security/itrustcapital-domain-security.yml`](security/itrustcapital-domain-security.yml) | probed | TLS 1.3, HSTS, DNSSEC, CAA (6 issuers), SPF, DMARC `p=reject` |
-| [`lifecycle/itrustcapital-lifecycle.yml`](lifecycle/itrustcapital-lifecycle.yml) | searched | First-party service-status page; no API versioning/deprecation (no API) |
-| [`llms/itrustcapital-llms.txt`](llms/itrustcapital-llms.txt) | generated | Generated from the provider's own public pages; no `/llms.txt` is published |
+## Where to find this API
 
-No vulnerability disclosure program, trust center, published certifications, SDKs, CLI, MCP server,
-A2A agent card, webhooks or AsyncAPI surface were found.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.itrustcapital.com/)
+- [Pricing](https://www.itrustcapital.com/pricing)
+- [Sign up](https://app.itrustcapital.com/signUp)
+- [Support](https://help.itrustcapital.com/hc/en-us)
+- [Blog](https://www.itrustcapital.com/learn)
+- [Terms of service](https://www.itrustcapital.com/terms)
+- [Privacy policy](https://www.itrustcapital.com/privacy)
+- [GitHub](https://github.com/itrustcapital)
+- [Status](https://www.itrustcapital.com/support/service-status)
+
+## API Evangelist rating
+
+**Kin Score 11.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 17.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/itrustcapital/](https://apis.io/providers/itrustcapital/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for iTrustCapital: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/itrustcapital/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
